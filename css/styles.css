@@ -1,0 +1,31 @@
+
+nav{
+    height: 80px;
+    line-height: 80px;
+}
+nav img{
+    width: 180px;
+    margin-left: 50px;
+    position: absolute;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    float: right;
+    margin-right: 90px;
+    gap: 40px;
+}
+
+nav ul a{
+    text-decoration: none;
+    color: black;
+}
+
+.btn-contactos a{
+    border: 1px solid blue;
+    padding: 10px 20px;
+    color: blue;
+    box-shadow: -0.5px 0.5px 0px 0.5px blue;
+}
+
