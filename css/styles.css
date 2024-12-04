@@ -11,12 +11,14 @@ body {
 }
 
 nav{
-    height: 80px;
-    line-height: 80px;
+    margin-top: 10px;
+    height: 60px;
+    line-height: 60px;
 }
 nav img{
-    width: 180px;
+    width: 170px;
     margin-left: 50px;
+
 }
 
 nav ul{
@@ -25,6 +27,7 @@ nav ul{
     float: right;
     margin-right: 90px;
     gap: 40px;
+    align-items: center;
 }
 
 nav ul a{
@@ -36,7 +39,6 @@ nav ul a:hover{
     color: blue;
     transition: 0.3s ease-in-out;
 }
-
 
 .btn-contactos a{
     border: 1px solid blue;
@@ -50,7 +52,6 @@ nav ul a:hover{
     background-color: blue;
     transition: 0.5s ease-in-out;
 }
-
 
 .carousel-indicators button{
     width: 70px !important;
@@ -73,24 +74,15 @@ nav ul a:hover{
     background-color: black;
 }
 
-
-.carousel-control-prev-icon, .carousel-control-next-icon {
-    background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"%3E%3Cpath fill="%23333333" d="M14.12 4.12L9.88 8.24c-.39.39-.39 1.02 0 1.41l4.24 4.12c.39.39 1.02.39 1.41 0s.39-1.02 0-1.41L11.77 9l3.76-3.88c.39-.39.39-1.02 0-1.41-.39-.39-1.02-.39-1.41 0z"/%3E%3C/svg%3E')!important;
-    width: 80px !important; 
-    height: 80px !important; 
+.icon-prev, .icon-next{
+    font-size: 2.5rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    color: gray;
 }
 
-.carousel-control-next-icon {
-    transform: rotate(180deg);
-}
-
-/*.carousel-control-prev-icon:hover, .carousel-control-next-icon:hover{
-    background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"%3E%3Cpath fill="%230000FF" d="M14.12 4.12L9.88 8.24c-.39.39-.39 1.02 0 1.41l4.24 4.12c.39.39 1.02.39 1.41 0s.39-1.02 0-1.41L11.77 9l3.76-3.88c.39-.39.39-1.02 0-1.41-.39-.39-1.02-.39-1.41 0z"/%3E%3C/svg%3E')!important;
-    transition: 0.5s ease-in-out;
-}*/
-
-.carousel-control-prev-icon{
-    color: blue!important;
+.carousel-control-prev:hover .icon-prev, .carousel-control-next:hover .icon-next{
+    color: blue;
 }
 
 .carousel-caption{
@@ -174,28 +166,33 @@ nav ul a:hover{
     padding: 20px;
 }
 
-.card {
+.cards-paises .card {
     background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     width: 300px;
     text-align: center;
+    margin: 10px;
 }
 
-.card img {
+.cards-paises .card:hover {
+    border: 1px solid blue!important;
+}
+
+.cards-paises .card img {
     width: 100%;
-    height: 150px;
+    height: auto;
     object-fit: cover;
+    margin: 0;
 }
 
 .card-body {
-    padding: 15px;
+    padding: 0px;
 }
 
 .card-body h2 {
-    font-size: 1.2rem;
-    margin: 10px 0;
+    margin: 0;
+    font-size: 18px;
+    color: #333;
 }
 
 .card-body p {
@@ -298,6 +295,11 @@ nav ul a:hover{
     background-color: white;
     color: black;
     margin-top: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btnExplorar:hover{
+    color: white;
 }
 
 .sectionExplorar p{
@@ -332,6 +334,7 @@ nav ul a:hover{
     text-align: center;
     padding: 20px;
     display: flex;
+    border-radius: 0px;
     flex-direction: column;
     transition: transform 0.3s ease-in-out;
 }
@@ -352,6 +355,8 @@ nav ul a:hover{
 .cards-sobre .card h2 {
     font-size: 1.2rem;
     margin-bottom: 10px;
+    font-weight: bold;
+    color: #000;
     font-family: 'Outfit', sans-serif;
 }
 
@@ -383,7 +388,10 @@ nav ul a:hover{
 }
 
 footer p{
+    margin: 0;
     text-align: center;
+    font-size: 14px;
+    padding-bottom: 15px;
 }
 
 footer img{
@@ -393,6 +401,7 @@ footer img{
 footer{
     text-align: center;
     background-color: #D9D9D9;
+
 }
 
 .footer-navbar ul{
@@ -408,42 +417,110 @@ footer a{
     color: black;
 }
 
-.redes-sociais{
-    display: flex;
-    gap: 15px;
+.social-icon{
+    display: inline-block;
+    border: 1px solid #1559B7;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 24px;
+    margin-right: 20px;
+    color: #1559B7;
+    transition: all 0.3s ease;
 }
 
-.social-icon {
-    width: 70px;
-    height: 70px;
-    border: 2px solid #0056b3;
-    border-radius: 50%;
+
+.social-icon:hover{
+    color:white;
+    background-color: #1559B7;
+}
+
+.paises-title{
+    float: left;
+    margin: 30px 0 20px 60px;
+}
+
+.Pais{
+    width: 200px;
+    height: 280px;
+    text-align: center;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease-in;
+}
+
+.Pais:hover{
+    transform: scale(1.1);
+}
+
+.Pais img{
+    width: 130px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.Pais-body{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
     align-items: center;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
+}
 
-  .social-icon svg {
-    width: 24px;
-    height: 24px;
-    fill: #0056b3;
-    transition: fill 0.3s ease;
-  }
-
-  /* Efeito ao passar o mouse */
-  .social-icon:hover {
-    background-color: #0056b3; 
-  }
-
-  .social-icon:hover svg {
-    fill: #fff;
-  }
+.Pais-body button{
+    margin-top: 5px;
+    width: 90%;
+    height: 90%;
+    transition: transform 0.3s ease-in-out;
+}
 
 
+.Pais-body button:hover{
+    transform: scale(1.1);
+}
 
 
+.detalhes-pais{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
 
+.detalhes-pais img{
+    width: 300px;
+    margin-top: 50px;
+    margin-left: 50px;
+}
 
+.detalhes-pais table{
+    width: 70%;
+    float: right;
+}
 
+.btnVoltar{
+    color: white;
+    background-color: #1559B7;
+    position: absolute;
+    text-decoration: none;
+    bottom: 50px;
+    left: 50px;
+    padding: 5px 40px;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.btnVoltar:hover{
+    transform: scale(1.1);
+}
 
