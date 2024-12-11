@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>HomePage</title>
+</head>
+
+<header>
+    <nav>
+        <img src="img/ipl_logo.png" alt="logo do ipl">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="paises.html">Países</a></li>
+            <li><a href="favoritos.html">Favoritos</a></li>
+            <li class="btn-contactos"><a href="contactos.html">Contactos</a></li>
+        </ul>
+    </nav>
+</header>
+
+<body>
+
+<main>
+    <div class="Sobre-projeto">
+        <p>
+            Este projeto foi criado para a disciplina de PWC e têm como objetivo controlar a API restcountries e criar um site onde trabalhamos com esses dados, usando as linguagens html, css e javascript
+        </p>
+    </div>
+
+    <section class="equipa">
+        <h2>Os desenvolvedores</h2>
+        <div class="cards-container">
+            <div class="card">
+                <h3>Diogo Godinho</h3>
+                <p class="desc-desenvolvedor">
+                    Chamo-me Diogo Godinho, sou de figueiró dos vinhos e tenho 19 anos.
+                </p>
+                <div class="icon">
+                    <a href="https://www.facebook.com" target="_blank">
+                        <img src="img/facebook.png" alt="Facebook">
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank">
+                        <img src="img/instagram.png" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Eduardo Oliveira</h3>
+                <p class="desc-desenvolvedor">
+                    Chamo-me Eduardo Oliveira, sou da Lourinhã e tenho 19 anos.
+                </p>
+                <div class="icon">
+                    <a href="https://www.facebook.com" target="_blank">
+                        <img src="img/facebook.png" alt="Facebook">
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank">
+                        <img src="img/instagram.png" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contactos">
+        <h2>Entre em Contato</h2>
+        <form>
+            <label>Nome:</label>
+            <input type="text" placeholder="Seu nome" required>
+
+            <label>Email:</label>
+            <input type="email" placeholder="Seu email" required>
+
+            <label>Mensagem:</label>
+            <textarea rows="5" placeholder="Sua mensagem" required></textarea>
+            <button type="submit" class="btn-enviar">Enviar</button>
+        </form>
+    </section>
+</main>
+</body>
+</html>
