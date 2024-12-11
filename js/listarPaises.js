@@ -37,7 +37,12 @@ function getCardPais(imagemUrl, nome, regiao) {
             <div class="Pais-body">
                 <h5 class="Pais-title">${nome}</h5>
                 <small class="text-body-secondary">Região: ${regiao}</small>
-                <button class="btn btn-primary float-end" onclick="verDetalhes('${nome}')">Ver</button>
+                <div class="botoesDetalhes">
+                    <button class="btn btn-primary float-end" onclick="verDetalhes('${nome}')">Ver</button>
+                    <button class="btn btn-danger" onclick="adicionarAosFavoritos('${nome}')">
+                        <i class="fa fa-heart"></i>
+                    </button>
+                </div>
             </div>
         </div>
     `;
