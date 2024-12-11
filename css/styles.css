@@ -508,6 +508,11 @@ footer a{
     float: right;
 }
 
+.botoesDetalhes{
+    display: flex;
+    gap: 10px;
+}
+
 .btnVoltar{
     color: white;
     background-color: #1559B7;

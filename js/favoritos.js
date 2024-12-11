@@ -5,20 +5,38 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function carregarFavoritos(){
-    let favoritos = Json.parse(localStorage.getItem('favoritos'));
 
-    favoritosContainer.innerHtml = '';
+    let favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
 
-    if(favoritos.length == 0){
-        favoritosContainer.innerHtml = '<p class="text-center">Ainda não tem nenhum país na lista</P>';
+    const favoritosContainer = document.querySelector('#favoritos-container');
+    favoritosContainer.innerHTML = '';
+
+    if (favoritos.length == 0) {
+        favoritosContainer.innerHTML = '<p class="text-center">Ainda não tem nenhum país na lista</P>';
         return;
     }
 
-    favoritos.foreach(pais =>{
-        const card = getCardPais(pais.imagemUrl, pais.nome, pais.regiao);
-        favoritosContainer.appendChild(card);
-    });
+    $.ajax({
+        url: 'https://restcountries.com/v3.1/all',
+        method: 'GET',
+        success: function(data) {
+            favoritos.forEach(nome => {
+                const paisEncontrado = data.find(country => country.name.common === nome);
 
+                if (paisEncontrado) {
+                    const nome = paisEncontrado.name.common;
+                    const regiao = paisEncontrado.region ? paisEncontrado.region : 'erro na região';
+                    const imagemUrl = paisEncontrado.flags.svg || 'logo.jpg';
+
+                    const card = getCardPais(imagemUrl, nome, regiao);
+                    favoritosContainer.appendChild(card);
+                }
+            });
+        },
+        error: function(error) {
+            console.error('Erro ao obter dados da API de países:', error);
+        }
+    });
 }
 
 
@@ -39,6 +57,7 @@ function getCardPais(imagemUrl, nome, regiao) {
     `;
     return divCountry;
 }
+
 
 function verDetalhes(nome) {
     window.location.assign(`detalhes.html?pais=${nome}`);

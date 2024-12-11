@@ -16,7 +16,6 @@ function getCountries() {
             console.error('Erro ao obter dados da API de países:', error);
         }
     });
-
 }
 
 function listarPais(data) {
@@ -52,6 +51,22 @@ function getCardPais(imagemUrl, nome, regiao) {
 function verDetalhes(nome) {
     console.log(nome);
     window.location.assign(`detalhes.html?pais=${nome}`);
+}
+
+function adicionarAosFavoritos(nome) {
+    let favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
+
+    const paisExistente = favoritos.find(pais => pais === nome);
+
+    if (paisExistente) {
+        favoritos = favoritos.filter(pais => pais !== nome);
+    } else {
+        favoritos.push(nome);
+    }
+
+    console.log(favoritos);
+
+    localStorage.setItem('favoritos', JSON.stringify(favoritos));
 }
 
 getCountries();
