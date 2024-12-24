@@ -1,5 +1,6 @@
 const apiUrl = 'https://restcountries.com/v3.1/all';
 const content_paises = document.querySelector('#countries-container');
+let CountriesData = [];
 
 getCountries();
 function getCountries() {
@@ -10,7 +11,8 @@ function getCountries() {
             'Content-Type': 'application/json',
         },
         success: function(data) {
-            listarPais(data);
+            CountriesData = data;
+            listarPais(CountriesData);
         },
         error: function(error) {
             console.error('Erro ao obter dados da API de países:', error);
@@ -19,6 +21,7 @@ function getCountries() {
 }
 
 function listarPais(data) {
+    content_paises.innerHTML = '';
     data.forEach(country => {
         const nome = country.name.common || 'erro no nome';
         const regiao = country.region ? country.region : 'erro na região';
@@ -70,5 +73,21 @@ function adicionarAosFavoritos(nome) {
 
     alert("O pais foi adicionado aos favoritos");
 }
+
+document.getElementById('search-button').addEventListener('click', function() {
+    const textoPesquisado = document.getElementById('search-bar').value.toLowerCase();
+    const paisesFiltrados = CountriesData.filter(country => 
+        country.name.common.toLowerCase().includes(textoPesquisado)
+    );
+    if(textoPesquisado.value == ' '){
+        listarPais(CountriesData)
+    }else{
+        if(paisesFiltrados.length == 0){
+            window.alert('Nenhum país encontrado!');
+        }else{
+            listarPais(paisesFiltrados);
+        }
+    }
+});
 
 getCountries();

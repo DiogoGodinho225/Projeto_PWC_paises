@@ -12,7 +12,7 @@ function carregarFavoritos(){
     favoritosContainer.innerHTML = '';
 
     if (favoritos.length == 0) {
-        favoritosContainer.innerHTML = '<p class="text-center">Ainda não tem nenhum país na lista</P>';
+        favoritosContainer.innerHTML = '<p class="text-left">Ainda não tem nenhum país na lista...</P>';
         return;
     }
 
@@ -61,11 +61,11 @@ function getCardPais(imagemUrl, nome, regiao) {
             <div class="Pais-body">
                 <h5 class="Pais-title">${nome}</h5>
                 <small class="text-body-secondary">Região: ${regiao}</small>
-                <div class="botoesDetalhes d-flex justify-content-between mt-2">
-                    <button class="btn btn-primary" onclick="verDetalhes('${nome}')">Ver</button>
-                </div>
-                <div class="botoesDetalhes d-flex justify-content-between mt-2">
-                    <button class="btn btn-primary" onclick="removerfavorito('${nome}')">Remover</button>
+                <div class="botoesDetalhes">
+                    <button class="btn btn-primary float-end" onclick="verDetalhes('${nome}')">Ver</button>
+                    <button class="btn btn-danger" onclick="removerfavorito('${nome}')">
+                        <i class="fa fa-trash"></i>
+                    </button>
                 </div>
             </div>
         </div>
