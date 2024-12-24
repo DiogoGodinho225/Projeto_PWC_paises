@@ -39,6 +39,18 @@ function carregarFavoritos(){
     });
 }
 
+function removerfavorito(nome)
+{
+    let favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
+
+    favoritos = favoritos.filter(favorito => favorito !== nome);
+
+    localStorage.setItem('favoritos', JSON.stringify(favoritos));
+
+    carregarFavoritos();
+
+    alert("O pais foi removido dos favoritos");
+}
 
 function getCardPais(imagemUrl, nome, regiao) {
     const divCountry = document.createElement('div');
@@ -51,6 +63,9 @@ function getCardPais(imagemUrl, nome, regiao) {
                 <small class="text-body-secondary">Região: ${regiao}</small>
                 <div class="botoesDetalhes d-flex justify-content-between mt-2">
                     <button class="btn btn-primary" onclick="verDetalhes('${nome}')">Ver</button>
+                </div>
+                <div class="botoesDetalhes d-flex justify-content-between mt-2">
+                    <button class="btn btn-primary" onclick="removerfavorito('${nome}')">Remover</button>
                 </div>
             </div>
         </div>

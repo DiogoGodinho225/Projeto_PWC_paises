@@ -67,6 +67,8 @@ function adicionarAosFavoritos(nome) {
     console.log(favoritos);
 
     localStorage.setItem('favoritos', JSON.stringify(favoritos));
+
+    alert("O pais foi adicionado aos favoritos");
 }
 
 getCountries();
