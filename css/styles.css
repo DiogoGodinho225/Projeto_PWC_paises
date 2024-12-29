@@ -682,3 +682,122 @@ footer a{
     margin-right: 50px;
 }
 
+
+@media(max-width: 768px){
+   
+    header img {
+        width: 20%;  
+        margin-right: auto;
+        margin-bottom: 3px; 
+    }
+
+
+    header nav {
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        width: 100%;
+    }
+
+    nav li {
+        padding: 0 8px; 
+    }
+
+    nav li a {
+        font-size: 14px; 
+    }
+
+    
+    .btn-contactos a {
+        font-size: 14px; 
+    }
+
+    
+    .navbar-toggler {
+        position: absolute; 
+        right: 30px;  
+    }
+
+    .navbar-collapse {
+        display: flex;
+        justify-content: center;
+    }
+
+   
+    .carousel-inner img {
+        object-fit: contain; 
+        width: 100px;
+        margin-top: 150px;
+    }
+    
+    .carousel-caption h1 {
+        font-size: 14px;  
+    }
+    
+    .carousel-caption p {
+        font-size: 10px;  
+    }
+
+    .carousel-indicators button{
+        width: 50px;
+    }
+
+    .carousel-item{
+        height: 300px;
+    }
+
+    #search-bar {
+        height: 30px; 
+        font-size: 12px;
+    }
+
+    #search-button {
+        height: 30px;
+        font-size: 12px;
+    }
+
+    .Pais {
+        width: 170px; 
+        height: 200px;
+    }
+
+    .Pais img {
+        height: 90px;
+    }
+
+    .Pais-title {
+        font-size: 14px; 
+    }
+
+    .text-body-secondary {
+        font-size: 10px; 
+    }
+
+    .botoesDetalhes .btn {
+        font-size: 10px; 
+        padding: 3px 8px;
+    }
+
+    .detalhes-pais img {
+        width: 120px; 
+    }
+
+    .detalhes-pais table {
+        font-size: 12px; 
+        width: 100%;
+        margin: 15px 5px; 
+    }
+
+    .btnVoltar {
+        font-size: 10px; 
+        padding: 4px 8px;
+        margin-top: 20px;
+    }
+
+    .detalhes-pais {
+        margin: 15px; 
+        padding: 15px; 
+    }
+
+    
+}
