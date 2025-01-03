@@ -200,6 +200,7 @@ nav ul a:hover{
     margin: 0;
     font-size: 18px;
     color: #333;
+    font-weight: bold;
 }
 
 .card-body p {
@@ -314,15 +315,21 @@ nav ul a:hover{
     font-size: 13px;
 }
 
+.sectionExplorar h1{
+    font-size: 55px;
+    font-weight: bold;
+}
+
 .cards-sobre {
     text-align: center;
     padding: 40px 0;
 }
 
 .cards-sobre h1 {
-    font-size: 2rem;
+    font-size: 3.5rem;
     margin-bottom: 30px;
     font-family: 'Outfit', sans-serif;
+    font-weight: bold;
 }
 
 .cards-sobre .row {
@@ -360,7 +367,7 @@ nav ul a:hover{
 }
 
 .cards-sobre .card h2 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-bottom: 10px;
     font-weight: bold;
     color: #000;
@@ -681,6 +688,8 @@ footer a{
     height: 20px;
     margin-right: 50px;
 }
+
+
 
 
 @media(max-width: 768px){
